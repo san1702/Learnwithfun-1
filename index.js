@@ -1,4 +1,19 @@
 const readLineSync = require('readline-sync');
+
+function welcome()
+{
+const welcome = readLineSync.question('\nAre you ready for the quiz? ' + '\n');
+
+if(welcome == "yes"){
+console.log("Good,let's Start");
+main();
+}
+else {
+console.log("cool, come back later")
+return;
+}
+}
+
 var myquestions =[
     {
       question : " The C++ language is" ,
@@ -104,5 +119,5 @@ function showAnswers(questionnumber){
 function DisplayScore(score){
   console.log(` you scored ${score} out of ${myquestions.length}`);
 }
+welcome();
 
-main();
