@@ -88,7 +88,7 @@ function showQuestion(questionnumber){
 }
 
 function showOptions(questionnumber){
- 
+ // option is assigned as 97 , as i want to show my option number as 'a', checking till 100 since there are 4 options
 for(var options = 97 ; options <= 100 ; options++){
   	var showoptions = String.fromCharCode(options);
     console.log(`${showoptions}. ${questions[questionnumber].options[options-97]}`);
